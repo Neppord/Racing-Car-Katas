@@ -14,7 +14,7 @@ export class Alarm {
   }
 
   public check() {
-    var psiPressureValue = this._sensor.popNextPressurePsiValue();
+    let psiPressureValue = this._sensor.popNextPressurePsiValue();
 
     if (
       psiPressureValue < this._lowPressureThreshold ||
