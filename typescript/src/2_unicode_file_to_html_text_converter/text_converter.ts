@@ -11,7 +11,7 @@ export class UnicodeFileToHtmlTextConverter {
     let buffer = fs.readFileSync(this._fullNameWithPath);
     let lines = buffer.toString("utf-8").split("\n");
     let html = "";
-    for (let line in lines) {
+    for (let line of lines) {
       line = line.trimRight();
       html += line.replace(
         /[&<>]/g,

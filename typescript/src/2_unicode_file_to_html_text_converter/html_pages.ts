@@ -11,7 +11,7 @@ export class HtmlPageConverter {
     let buffer = fs.readFileSync(this._filename);
     let lines = buffer.toString("utf-8").split("\n");
     let tell = 0;
-    for (let line in lines) {
+    for (let line of lines) {
       if (line.indexOf("PAGE_BREAK") !== -1) {
         this._breaks.push(tell);
       }
@@ -28,7 +28,7 @@ export class HtmlPageConverter {
     let buffer = fs.readFileSync(this._filename);
     let lines = buffer.toString("utf-8").split("\n");
     let tell = 0;
-    for (let line in lines) {
+    for (let line of lines) {
       if (
         tell < pageStart ||
         tell > pageEnd ||
